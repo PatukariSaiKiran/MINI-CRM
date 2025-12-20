@@ -1,0 +1,2 @@
+route links: enables client-side navigation without full page reload, which is essential for angular SPA behavior.
+2.routerlinkACtive: it helps indicate the currently active route in the UI

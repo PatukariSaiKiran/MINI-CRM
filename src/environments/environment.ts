@@ -3,7 +3,8 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  apiBaseUrl: 'https://virtserver.swaggerhub.com/minicrm/mini-crm-apis/1.0.0 - SwaggerHub API Auto Mocking'
 };
 
 /*

@@ -15,6 +15,7 @@ import { NotesComponent } from './features/notes/notes.component';
 import { NotFoundComponent } from './core/error-pages/not-found/not-found.component';
 import { LoaderComponent } from './shared/components/loader/loader.component';
 import { SharedModule } from './shared/shared.module';
+import { LoaderInterceptor } from './core/interceptors/loader.interceptor';
 
 
 @NgModule({
@@ -35,7 +36,9 @@ import { SharedModule } from './shared/shared.module';
     HttpClientModule,
     SharedModule
   ],
-  providers: [],
+  providers: [
+    {provide: HTTP_INTERCEPTORS, useClass: LoaderInterceptor, multi: true}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -18,3 +18,7 @@ export class LoaderInterceptor implements HttpInterceptor {
     return next.handle(request).pipe(finalize(() => this.loader.hide()));
   }
 }
+/**
+ * So the final flow is:
+Any API call → Interceptor show() → loader appears → API completes/errors → finalize() hide() → loader disappears.
+ */

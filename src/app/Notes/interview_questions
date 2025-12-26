@@ -1,0 +1,19 @@
+Interview-level explanation (memorize this)
+
+If interviewer asks:
+
+❓ Why did you use union type instead of string for role?
+
+✅ Perfect answer:
+
+“The backend defines role as a fixed enum.
+Using a union type enforces those allowed values at compile time, prevents invalid roles, and keeps frontend and backend contracts consistent.”
+
+This is a strong professional answer.
+But roles, status, enums → always union types.
+
+Final takeaway
+Union types = type safety
+Prevents bugs
+Matches Swagger enums
+Interview-friendly

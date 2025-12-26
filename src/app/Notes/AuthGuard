@@ -1,0 +1,46 @@
+1) What is an Auth Guard?
+
+Auth Guard is a security check before route loads.
+
+When user clicks Leads:
+
+Angular asks Guard: “Can this user enter?”
+
+If logged in → allow
+
+If not logged in → redirect
+
+2) Why canActivate?
+
+Because it is the most common guard used in real apps to protect pages.
+
+3) Why UrlTree return?
+
+This is professional style:
+
+Instead of manually navigating, we return a redirect route (UrlTree)
+
+Angular handles it cleanly
+
+
+v“What is Auth Guard in Angular?”
+✅ Best Answer:
+
+Auth Guard is used to protect routes in Angular applications.
+It checks authentication or authorization logic before a route is activated and either allows access or redirects the user.
+
+When to use Auth Guard?
+
+Protect dashboard
+
+Protect admin pages
+
+Protect user profile
+
+Protect feature pages like Leads, Contacts, Tasks
+
+Auth Guard = Gatekeeper of routes
+
+command
+
+ng g guard auth

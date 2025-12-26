@@ -5,6 +5,7 @@
   "projects": {
     "mini-crm": {
       "projectType": "application",
+      
       "schematics": {
         "@schematics/angular:component": {
           "style": "scss"
@@ -37,6 +38,8 @@
           },
           "configurations": {
             "production": {
+              "baseHref": "/MINI-CRM/",
+              "deployUrl": "/MINI-CRM/",
               "budgets": [
                 {
                   "type": "initial",
@@ -102,6 +105,7 @@
               "src/styles.scss"
             ],
             "scripts": []
+
           }
         }
       }

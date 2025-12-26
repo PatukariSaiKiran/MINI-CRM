@@ -7,13 +7,14 @@ import { TasksComponent } from './features/tasks/tasks.component';
 import { NotesComponent } from './features/notes/notes.component';
 import { NotFoundComponent } from './core/error-pages/not-found/not-found.component';
 import { LoaderComponent } from './shared/components/loader/loader.component';
+import { AuthGuard } from './core/guards/auth.guard';
 const routes: Routes = [
   //when user opens the app, show dashboard page
   {path: '', component: DashboardComponent},
-  {path: 'leads', component: LeadsComponent},
-  {path:'contacts', component: ContactsComponent},
-  {path:'tasks', component: TasksComponent},
-  {path:'notes', component: NotesComponent},
+  {path: 'leads', component: LeadsComponent, canActivate: [AuthGuard]},
+  {path:'contacts', component: ContactsComponent, canActivate: [AuthGuard]},
+  {path:'tasks', component: TasksComponent  , canActivate: [AuthGuard]},
+  {path:'notes', component: NotesComponent, canActivate: [AuthGuard]},
     //If user enters any wrong URL, redirect to Dashboard (temporary)
   {path: '**', redirectTo: '', component: NotFoundComponent}
 ];

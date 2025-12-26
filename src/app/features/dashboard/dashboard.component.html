@@ -1,6 +1,14 @@
-<section>
-    <h1>Dashboard</h1>
-    <p>Welcome! This Mini CRM will manage Leads, Contacts, Tasks and Notes.</p>
-  </section>
+<h2>Auth API Test</h2>
 
-  
+<button (click)="login()">Login</button>
+<button (click)="getProfile()">Get Profile</button>
+<button (click)="logout()">Logout</button>
+
+<hr />
+
+<div *ngIf="user">
+  <h3>User Info</h3>
+  <p><strong>Name:</strong> {{ user.name }}</p>
+  <p><strong>Email:</strong> {{ user.email }}</p>
+  <p><strong>Role:</strong> {{ user.role }}</p>
+</div>

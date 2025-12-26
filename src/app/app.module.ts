@@ -16,7 +16,7 @@ import { NotFoundComponent } from './core/error-pages/not-found/not-found.compon
 import { LoaderComponent } from './shared/components/loader/loader.component';
 import { SharedModule } from './shared/shared.module';
 import { LoaderInterceptor } from './core/interceptors/loader.interceptor';
-
+import { AuthInterceptor } from './core/interceptors/auth.interceptor';
 
 @NgModule({
   declarations: [

@@ -1,0 +1,49 @@
+ng generate interceptor core/interceptors/auth
+
+
+What is an HTTP Interceptor? (Very clear definition)
+
+An HTTP Interceptor is an Angular service that sits between the application and the backend, allowing us to inspect, modify, or handle HTTP requests and responses globally before they are sent or received.
+
+Simple version:
+
+Interceptor runs automatically for every API call.
+
+How interceptor actually works (step-by-step)
+When you call:
+this.http.get('/auth/me')
+
+
+Angular internally does:
+
+1️⃣ Request created
+2️⃣ Interceptor catches it
+3️⃣ Interceptor modifies it (adds token)
+4️⃣ Request sent to backend
+5️⃣ Response comes back
+6️⃣ Interceptor can also read/handle response
+7️⃣ Component gets final response
+
+
+What happens if you DON’T use interceptors?
+Problem 1: Repeated token logic everywhere
+Problem 2: Easy to forget token
+Problem 3: Security holes
+Problem 4: No central error handling
+
+What interceptors are commonly used for (real apps)
+
+1️⃣ Attach Authorization token
+2️⃣ Show/Hide loader (spinner)
+3️⃣ Global error handling
+4️⃣ Logging / debugging
+5️⃣ Request/response transformation
+
+How to manage multiple interceptors?
+
+Angular allows you to register multiple interceptors. They are executed in the order they are
+
+Why do we use HTTP Interceptors?
+✅ Best answer:
+
+HTTP Interceptors allow us to handle cross-cutting concerns like authentication headers, error handling, and loaders in one central place, ensuring consistency and reducing code duplication across the application.

@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  apiBaseUrl: 'https://virtserver.swaggerhub.com/minicrm/mini-crm-apis/1.0.0 - SwaggerHub API Auto Mocking'
+  apiBaseUrl: 'https://virtserver.swaggerhub.com/minicrm/mini-crm-apis/1.0.0'
 };
 
 /*

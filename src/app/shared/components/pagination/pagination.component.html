@@ -1,0 +1,13 @@
+<div style="display:flex; justify-content:space-between; align-items:center; margin-top:12px;">
+    <div>
+      Showing {{ startItem }} – {{ endItem }} of {{ total }}
+      &nbsp; | &nbsp;
+      Page: {{ page }} / {{ totalPages }}
+    </div>
+  
+    <div style="display:flex; gap:8px;">
+      <button (click)="goToFirst()" [disabled]="page === 1">&laquo;</button>
+      <button (click)="goToLast()" [disabled]="page === totalPages">&raquo;</button>
+    </div>
+  </div>
+  

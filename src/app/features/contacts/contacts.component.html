@@ -1,5 +1,24 @@
-<section>
-    <h1>Contacts</h1>
-    <p>Here we will manage contacts and link them to leads.</p>
-  </section>
+<input [(ngModel)]="q" placeholder="Search contacts" />
+<button (click)="onSearch()">Search</button>
+
+<table>
+  <!-- contacts rows -->
+</table>
+
+<app-pagination
+  [page]="page"
+  [total]="total"
+  [limit]="limit"
+  (pageChange)="onPageChange($event)">
+</app-pagination>
+
+<tr *ngFor="let contact of contacts">
+    <!-- other td's -->
+    <td>
+      <app-delete
+        label="Delete Contact"
+        (confirmDelete)="deleteContact(contact.id)">
+      </app-delete>
+    </td>
+  </tr>
   

@@ -1,5 +1,5 @@
 <app-header></app-header>
-<app-loader *ngIf="isLoading"></app-loader>
+<app-loader *ngIf="isLoading$ | async"></app-loader>
 <!-- What we are doing: showing spinner only when service says “loading = true”. -->
 <main class="app-container">
   <router-outlet></router-outlet>

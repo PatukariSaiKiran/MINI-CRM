@@ -1,18 +1,17 @@
-import { Component } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
 import { LoaderService } from './core/services/loader.service';
+import { AuthService } from './core/services/auth.service';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  isLoading = false;
   title = 'mini-crm';
+  isLoading$: Observable<boolean>;
   constructor(private loader: LoaderService) {
-    this.loader.loading$.subscribe((v) => {
-      this.isLoading = v;
-    });
+   this.isLoading$ = this.loader.loading$;
   }
 }
 
